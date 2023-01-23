@@ -10,10 +10,10 @@
           background-size: cover;
       }
  </style>
-
+<h1 style="text-align:center; color:white"> Liste des matchs </h1>
 @foreach($evenements as $evenement)
 
-   
+
 
 <div class="card bg-glass" style="width: 18rem; display: inline-block; margin-left: 0.6rem; background-color:dark-gray">
 
