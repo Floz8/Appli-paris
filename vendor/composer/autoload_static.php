@@ -529,6 +529,7 @@ class ComposerStaticInit282d255de5b9a64c3fc2c5357cdf5c6e
         'App\\Http\\Controllers\\ChallengerController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChallengerController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EvenementController' => __DIR__ . '/../..' . '/app/Http/Controllers/EvenementController.php',
+        'App\\Http\\Controllers\\GroupeController' => __DIR__ . '/../..' . '/app/Http/Controllers/GroupeController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
