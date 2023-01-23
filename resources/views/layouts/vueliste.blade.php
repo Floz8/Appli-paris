@@ -29,34 +29,44 @@
           }
             
       </style>
-    </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="
-    padding-left: 8px; background-color:dimgray">
-      <a class="navbar-brand" style="color:white; margin-right: 2rem;"  href="#">Paris sportifs</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" style="color:white; margin-right: 2rem; margin-left: 2rem;"  href="/dashboard#">Paris sportifs</a>
       
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-
-          @if(auth()->check())
-          <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Deconnexion</a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-    @csrf
-</form>
-          <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="/groupes">Mes groupes</a>
-          <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="/profile">Paramètres</a>
-          
-          @else
-          <a class="nav-item nav-link" style="color:white; margin-right: 0.6rem;" href="login">Connexion</a>
-          @endif
-          
-        </div>
-      </div>
+      @if(auth()->check())
+        <ul class="navbar-nav text-right list-inline">    
+          <li class="nav-item">
+            <a class="nav-link" style="margin-right: 0.6rem;" aria-current="page" href="/groupes">Mes groupes</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav list-inline" style="text-align: right;">    
+          <li class="nav-item">
+            <a class="nav-link" style="margin-right: 0.6rem;" aria-current="page" href="/profile">Bonjour {{ Auth::user()->name }}</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="margin-right: 0.6rem;" aria-current="page" href="/CreerGroupe">Créer un groupe</a>
+            
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" style="margin-right: 0.3rem;" aria-current="page" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Deconnexion</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
+          </li>
+        </ul>
+        
+      @else
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-item nav-link" style="margin-right: 0.6rem;" href="login">Connexion</a>
+          </li>
+        </ul>
+      @endif
+ 
     </nav>
-
+    </head>
+    
 <body>
 
 @yield('content')

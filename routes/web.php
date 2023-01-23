@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ChallengerController;
+use App\Http\Controllers\GroupeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +34,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
-Route::get('/groupes', function () {
-    return view('groupes');
+Route::get('/CreerGroupe', function () {
+    return view('CreerGroupe');
 });
+Route::Post('/CreerTache', [GroupeController::class, 'store'])->name('groupes.store');
+
+Route::get('/groupes', [GroupeController::class, 'groups'])->name('groupes');
 
 require __DIR__.'/auth.php';
