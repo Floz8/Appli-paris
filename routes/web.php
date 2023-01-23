@@ -34,13 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-<<<<<<< HEAD
 
 Route::get('/groupes', function () {
     return view('groupes');
 });
-=======
-Route::get('welcome', [EvenementController::class, 'list']);
->>>>>>> 2fbe591249b9462b5fb6810bd1b1698016c63e97
 
 require __DIR__.'/auth.php';
