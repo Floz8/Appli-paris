@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ChallengerController;
+use App\Http\Controllers\GroupeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,6 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/groupes', function () {
-    return view('groupes');
-});
+Route::get('/groupes', [GroupeController::class, 'groups'])->name('groupes');
 
 require __DIR__.'/auth.php';

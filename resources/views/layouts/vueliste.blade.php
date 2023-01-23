@@ -32,8 +32,10 @@
     </head>
 
     <nav class="navbar navbar-expand-lg navbar-light" style="
+
     padding-left: 8px; background-color:dimgray">
       <a href="/dashboard" class="navbar-brand" style="color:white; margin-right: 2rem;"  href="#">Paris sportifs</a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,7 +49,9 @@
     @csrf
 </form>
           <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="/groupes">Mes groupes</a>
+          <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="/profile">Créer un groupe d'amis</a>
           <a class="nav-link active" style="color:white; margin-right: 0.6rem;" aria-current="page" href="/profile">Paramètres</a>
+          
           
           @else
           <a class="nav-item nav-link" style="color:white; margin-right: 0.6rem;" href="login">Connexion</a>
