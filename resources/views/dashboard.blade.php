@@ -1,17 +1,44 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.vueliste')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("Liste des matchs") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('content')
+<style>
+         body {
+          font-family: 'Nunito', sans-serif;
+          background-image: url("background.jpg");
+          background-color: #2d3748;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+ </style>
+
+@foreach($evenements as $evenement)
+
+   
+
+<div class="card bg-glass" style="width: 18rem; display: inline-block; margin-left: 0.6rem; background-color:dark-gray">
+
+        
+  <div class="card-body">
+    <h5 class="card-title" style=" display: inline-block"> {{$evenement['Etat']}}</h5>
+    @foreach($challengers as $challenger)
+        @if($evenement['challenger1_id'] == $challenger['id'])
+             <p class="card-text">Equipe: {{$challenger['nom']}}</p>
+        @endif
+    @endforeach
+    @foreach($challengers as $challenger)
+        @if($evenement['challenger2_id'] == $challenger['id'])
+            <p class="card-text">Equipe: {{$challenger['nom']}}</p> 
+        @endif
+    @endforeach
+   
+            @csrf
+    
+    <button type="submit" class="btn btn-primary" style="margin-top:2rem;">test</button>
+        </form>
+  </div>
+</div>
+  
+@endforeach
+
+
+@endsection
