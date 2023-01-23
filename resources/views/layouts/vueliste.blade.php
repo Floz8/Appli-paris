@@ -46,7 +46,7 @@
           @else
           <a class="nav-item nav-link" style="color:white; margin-right: 0.6rem;" href="login">Connexion</a>
           @endif
-          <a href="/CreerTache" class="btn btn-primary box">+</a>
+          
         </div>
       </div>
     </nav>
