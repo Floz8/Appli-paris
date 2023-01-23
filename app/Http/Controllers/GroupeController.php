@@ -41,7 +41,7 @@ class GroupeController extends Controller
             $assoc->group_id = $groupe->id;
             $assoc->score = 0;
             $assoc->save();
-            return redirect('/dashboard')->with('success', 'groupe créée!');
+            return redirect('/groupes')->with('success', 'groupe créée!');
          
     }
 
