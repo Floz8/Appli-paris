@@ -25,7 +25,7 @@ Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard', [EvenementController::class, 'list'])->name('dashboard');
-//Route::get('/dashboard', [ChallengerController::class, 'listchallenger'])->name('dashboard');
+
 
 
 Route::middleware('auth')->group(function () {
@@ -34,6 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('welcome', [EvenementController::class, 'list']);
+
+Route::get('/groupes', function () {
+    return view('groupes');
+});
 
 require __DIR__.'/auth.php';
