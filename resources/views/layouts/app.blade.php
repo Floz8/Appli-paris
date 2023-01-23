@@ -14,8 +14,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+        <div class="min-h-screen">
+            @include('layouts.vueliste')
 
             <!-- Page Heading -->
             @if (isset($header))
