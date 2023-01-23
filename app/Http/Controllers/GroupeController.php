@@ -26,6 +26,24 @@ class GroupeController extends Controller
             'users' => $users
             ]);
     }
+    public function store(Request $request)
+    {
+        $request->validate([
+            
+            
+        ]); 
+            $groupe = new Groupe();
+            $groupe->nom = $request->nom;
+            $groupe->save();
+
+            $assoc = new Assoc_Groupe();
+            $assoc->user_id  = auth()->id();
+            $assoc->group_id = $groupe->id;
+            $assoc->score = 0;
+            $assoc->save();
+            return redirect('/dashboard')->with('success', 'groupe créée!');
+         
+    }
 
  
 

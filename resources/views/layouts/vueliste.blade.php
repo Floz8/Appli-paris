@@ -42,6 +42,11 @@
         <ul class="navbar-nav list-inline" style="text-align: right;">    
           <li class="nav-item">
             <a class="nav-link" style="margin-right: 0.6rem;" aria-current="page" href="/profile">Bonjour {{ Auth::user()->name }}</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="margin-right: 0.6rem;" aria-current="page" href="/CreerGroupe">Créer un groupe</a>
+            
           </li>
           <li class="nav-item active">
             <a class="nav-link" style="margin-right: 0.3rem;" aria-current="page" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Deconnexion</a>
