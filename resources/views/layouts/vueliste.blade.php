@@ -32,8 +32,10 @@
     </head>
 
     <nav class="navbar navbar-expand-lg navbar-light" style="
-    padding-left: 8px; background-color:dimgray; opacity:80%">
-      <a class="navbar-brand" style="color:white; margin-right: 2rem;"  href="/dashboard">Paris sportifs</a>
+
+    padding-left: 8px; background-color:dimgray">
+      <a href="/dashboard" class="navbar-brand" style="color:white; margin-right: 2rem;"  href="#">Paris sportifs</a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
