@@ -1,9 +1,9 @@
 import GuestLayout from '@/Layouts/GuestLayout';
 import PrimaryButton from '@/Components/PrimaryButton';
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/inertia-react';
 
 export default function VerifyEmail({ status }) {
-    const { post, processing } = useForm({});
+    const { post, processing } = useForm();
 
     const submit = (e) => {
         e.preventDefault();
