@@ -29,6 +29,7 @@
           }
             
       </style>
+
       <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" style="color:white; margin-right: 2rem; margin-left: 2rem;"  href="/dashboard#">Paris sportifs</a>
       
@@ -57,7 +58,7 @@
           </li>
         </ul>
       @endif
-        
+ 
     </nav>
     </head>
     

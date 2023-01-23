@@ -1,6 +1,7 @@
 @extends('layouts.vueliste')
 
 @section('content')
+
     <style>
         body {
         font-family: 'Nunito', sans-serif;
@@ -32,5 +33,6 @@
                     </form>
             </div>
         </div>  
+
     @endforeach
 @endsection
