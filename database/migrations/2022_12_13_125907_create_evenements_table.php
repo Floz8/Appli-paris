@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('challenger2_id');
             $table->string('Etat');
             $table->string('Gagnant');
+            $table->date('date_evt');
         });
     }
 
