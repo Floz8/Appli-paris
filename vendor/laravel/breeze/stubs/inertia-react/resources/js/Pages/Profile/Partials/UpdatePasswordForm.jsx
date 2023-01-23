@@ -3,7 +3,7 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import { useForm } from '@inertiajs/react';
+import { useForm } from '@inertiajs/inertia-react';
 import { Transition } from '@headlessui/react';
 
 export default function UpdatePasswordForm({ className }) {
@@ -57,7 +57,7 @@ export default function UpdatePasswordForm({ className }) {
                         handleChange={(e) => setData('current_password', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
-                        autoComplete="current-password"
+                        autocomplete="current-password"
                     />
 
                     <InputError message={errors.current_password} className="mt-2" />
@@ -73,7 +73,7 @@ export default function UpdatePasswordForm({ className }) {
                         handleChange={(e) => setData('password', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
-                        autoComplete="new-password"
+                        autocomplete="new-password"
                     />
 
                     <InputError message={errors.password} className="mt-2" />
@@ -88,7 +88,7 @@ export default function UpdatePasswordForm({ className }) {
                         handleChange={(e) => setData('password_confirmation', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
-                        autoComplete="new-password"
+                        autocomplete="new-password"
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />

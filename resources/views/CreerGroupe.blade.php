@@ -18,12 +18,9 @@
       <form method="post" action="{{ route('groupes.store') }}">
           @csrf
           <div class="form-group">    
-              <label style="color:white"  for="groupe_nom">Nom:</label>
-              <input type="text" class="form-control" name="description"/>
+              <label style="color:white"  for="nom">Nom:</label>
+              <input type="text" class="form-control" name="nom"/>
           </div>
-          <div class="form-group">
-          <label style="color:white" for="tache_importance">Importance:</label>
-          <select class="form-select" aria-label="Default select example" name="importance">
 
 </select>
 </div>
