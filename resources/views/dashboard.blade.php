@@ -11,6 +11,7 @@
       }
  </style>
 <h1 style="text-align:center; color:white"> Liste des matchs </h1>
+<!-- <p> tfsdf </p> -->
 @foreach($evenements as $evenement)
 
 
