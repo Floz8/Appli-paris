@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\EvenementController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +23,7 @@ Route::get('/', function () {
 Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [EvenementController::class, 'list'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
